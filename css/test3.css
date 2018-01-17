@@ -1,0 +1,42 @@
+
+.day-muti-picker {
+    background-color: white;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    color: #333333;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 4px;
+    white-space: normal;
+    direction: ltr;
+    margin: 2px;
+    text-align: left;
+
+}
+
+.day-muti-picker td, .day-muti-picker th {
+    padding: 4px 5px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-collapse: collapse;
+
+    /*border: 1px solid darkgray;*/
+}
+
+.day-muti-picker td:hover, .day-muti-picker th:hover {
+    padding: 4px 5px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    border-collapse: collapse;
+
+    background-color: #dbdbdb;
+    /*border: 1px solid darkgray;*/
+}

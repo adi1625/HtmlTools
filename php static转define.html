@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>static 2 define</title>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css"/>
+    <script language="JavaScript" src="assets/jquery/jquery.js"></script>
+    <script language="JavaScript" src="assets/bootstrap/js/bootstrap.js"></script>
+
+
+    <style type="text/css">
+        body {
+            padding: 2em;
+            background-color: #979797
+        }
+
+        textarea {
+            padding: .5em;
+            height: 60em;
+            width: 100%;
+            font-family: Consolas,serif;
+            font-size: 1em;
+        }
+
+        button {
+            margin-top: 0;
+            height: 3em;
+            width: 100%;
+            font-size: 1.5em !important;
+        }
+
+        label {
+            font-size: 2em !important;
+            width: 100%;
+            color: white;
+        }
+
+        .btn_group {
+            margin-top: 4em;
+        }
+    </style>
+
+</head>
+<body>
+<div class="row">
+    <div class="col-md-5">
+        <label for="src">SRC</label>
+        <textarea id="src"></textarea>
+    </div>
+    <div class="col-md-2 btn_group">
+        <button type="button" class="btn btn-default" onclick="alert('By Kyran ~')">=== About ===</button>
+        <button type="button" class="btn btn-default" onclick="static2Define()">static2Define()</button>
+        <button type="button" class="btn btn-default" onclick="camel2UnderLine()">camel2UnderLine()</button>
+        <button type="button" class="btn btn-default" onclick="migration()">migration()</button>
+        <button type="button" class="btn btn-default" onclick="sortByAlpha()">sortByAlpha()</button>
+        <button type="button" class="btn btn-default" onclick="englishConvert('dx')">UpperCase</button>
+        <button type="button" class="btn btn-default" onclick="englishConvert('xx')">LowerCase</button>
+        <button type="button" class="btn btn-default" onclick="errCodeConvert()">errCodeConvert()</button>
+        <button type="button" class="btn btn-default" onclick="myClass()">myClass()</button>
+        <button type="button" class="btn btn-default" onclick="logical()">logical()</button>
+    </div>
+    <div class="col-md-5">
+        <label for="target">TARGET</label>
+        <textarea id="target"></textarea>
+    </div>
+</div>
+</body>
+
+<script language="JavaScript">
+
+    var $_src = $('#src');
+    var $_target = $('#target');
+
+    $(function () {
+
+    });
+
+
+    function static2Define() {
+        var srcStr = $_src.val();
+        srcStr = srcStr.replace(/public static \$/g, "define('");
+        srcStr = srcStr.replace(/ = /g, "', ");
+        srcStr = srcStr.replace(/;/g, ");");
+        $_target.val(srcStr);
+    }
+
+    function camel2UnderLine() {
+        var srcStr = $_src.val();
+        srcStr = srcStr.replace(/[0-9a-z][A-Z][a-z]/g, function (word) {
+            return word.substring(0, 1) + "_" + word.substring(1, 2).toLowerCase() + word.substring(2, 3);
+        });
+
+        $_target.val(srcStr);
+    }
+
+    function sortByAlpha() {
+        var srcStr = $_src.val();
+        var rows = srcStr.split('\n');
+
+        rows = rows.sort();
+
+        $_target.val(rows.join('\n'));
+    }
+
+    function logical() {
+        var srcStr = $_src.val(), tmpSrcStr = "", targetStr = "", tmpSrcList = [], rows = [];
+        var values = ['0', '1'];
+        var alpha = ['A', 'B'];
+
+        srcStr.replace(/" "/g, "");
+
+        // 默认值
+        if (srcStr === "") {
+            $_src.val("!(A||B)\n!A&&!B");
+            return;
+        }
+
+        tmpSrcStr = srcStr;
+        tmpSrcStr = tmpSrcStr.replace(new RegExp("A", 'ig'), "0");
+        targetStr += "0" + "    ";
+        tmpSrcStr = tmpSrcStr.replace(new RegExp("B", 'ig'), "0");
+        targetStr += "0" + "    ";
+        // 切分大串并执行
+        rows = tmpSrcStr.split('\n');
+        targetStr += Number(eval(rows[0])) + "    ";
+        targetStr += Number(eval(rows[1])) + "\n";
+
+        tmpSrcStr = srcStr;
+        tmpSrcStr = tmpSrcStr.replace(new RegExp("A", 'ig'), "0");
+        targetStr += "0" + "    ";
+        tmpSrcStr = tmpSrcStr.replace(new RegExp("B", 'ig'), "1");
+        targetStr += "1" + "    ";
+        // 切分大串并执行
+        rows = tmpSrcStr.split('\n');
+        targetStr += Number(eval(rows[0])) + "    ";
+        targetStr += Number(eval(rows[1])) + "\n";
+
+        tmpSrcStr = srcStr;
+        tmpSrcStr = tmpSrcStr.replace(new RegExp("A", 'ig'), "1");
+        targetStr += "1" + "    ";
+        tmpSrcStr = tmpSrcStr.replace(new RegExp("B", 'ig'), "0");
+        targetStr += "0" + "    ";
+        // 切分大串并执行
+        rows = tmpSrcStr.split('\n');
+        targetStr += Number(eval(rows[0])) + "    ";
+        targetStr += Number(eval(rows[1])) + "\n";
+
+        tmpSrcStr = srcStr;
+        tmpSrcStr = tmpSrcStr.replace(new RegExp("A", 'ig'), "1");
+        targetStr += "1" + "    ";
+        tmpSrcStr = tmpSrcStr.replace(new RegExp("B", 'ig'), "1");
+        targetStr += "1" + "    ";
+        // 切分大串并执行
+        rows = tmpSrcStr.split('\n');
+        targetStr += Number(eval(rows[0])) + "    ";
+        targetStr += Number(eval(rows[1])) + "\n";
+
+        $_target.val(targetStr);
+    }
+
+    function englishConvert(str) {
+        var srcStr = $_src.val();
+        if (srcStr === "" || srcStr === null) return;
+        if (str === "xx") {
+            $_target.val(srcStr.toLowerCase());
+        }
+        else {
+            $_target.val(srcStr.toUpperCase());
+        }
+    }
+
+    function myClass(str) {
+        var srcStr = $_src.val();
+        var rs = '';
+        if (srcStr === "" || srcStr === null) return;
+
+        srcStr = srcStr.toLowerCase();
+        var rows = srcStr.split('\n');
+
+        rows.forEach(function (row) {
+            if (row.trim() !== '') {
+                rs += '\n * @property ' + row + ' $' + row;
+            }
+        });
+
+        $_target.val(rs);
+    }
+
+    // $RPC_ERR_TABLE["-2090"] = '加密算法不合法'; To ->   'rule.rpc_invalid_dir_path' => '10032027',
+
+    function errCodeConvert() {
+        var srcStr = $_src.val();
+        var rows = srcStr.split('\n');
+        var res = '';
+
+        if (srcStr === '') {
+            $_src.val("$RPC_ERR_TABLE[\"-1000\"] = '无法连接主机';'node_offline'");
+        }
+
+        rows.forEach(function (row) {
+            if (row.trim() !== '') {
+                var code = row.match(/\d{4}/);
+                var msg = row.match(/'[^']+'/g);
+                if (code !== null && msg !== null) {
+//                    res += "        'rpc." + msg[1] + " => '" + "1111" + code[0] + "',\n";
+                } else {
+                    alert('null');
+                }
+            }
+        });
+        rows.forEach(function (row) {
+            if (row.trim() !== '') {
+                var code = row.match(/\d{4}/);
+                var msg = row.match(/'[^']+'/g);
+                if (code !== null && msg !== null) {
+                    res += "        $lang['rpc." + msg[1] + "] = " + msg[1] + ";\n";
+                } else {
+                    alert('null');
+                }
+            }
+        });
+
+        $_target.val(res);
+    }
+
+    function migration() {
+
+        var srcStr = $_src.val().replace(/,/g, '');
+        var rows = srcStr.split('\n');
+        var words = [];
+        var res = '';
+
+        if (srcStr === "") {
+            $_src.val("    node_uuid character varying(40) NOT NULL,\n" +
+                "    node_name character varying(64) NOT NULL UNIQUE,");
+        }
+
+        rows.forEach(function (row) {
+            words = row.split(' ');
+
+            var name = '';
+            var type = '';
+            var constraint = '';
+            var null_switch = '';
+            var unique = '';
+            var default_val = '';
+            var next_row = 0;
+
+            words.forEach(function (word) {
+                if (next_row === 0)
+                    switch (true) {
+                        case word === "":
+                            break;
+                        case /^--.*/i.test(word):
+                            next_row = 1;
+                            break;
+                        case /^PRIMARY$/i.test(word):
+                            break;
+                        case /^KEY$/i.test(word):
+                            break;
+                        case /^DEFAULT$/i.test(word):
+                            break;
+
+                        case /^character$/i.test(word):
+                            break;
+                        case /^varying\(.*/i.test(word):
+                            type = 'varchar';
+                            constraint = word.substring(8, word.length - 1);
+                            break;
+                        case /^varying.*/i.test(word):
+                            type = 'varchar';
+                            break;
+                        case /^serial$/i.test(word):
+                            type = 'serial';
+                            break;
+                        case /^integer$/i.test(word):
+                            type = 'integer';
+                            break;
+                        case /^bigint$/i.test(word):
+                            type = 'bigint';
+                            break;
+                        case /^text$/i.test(word):
+                            type = 'text';
+                            break;
+
+                        case /^NOT$/i.test(word):
+                            null_switch = 'false';
+                            break;
+                        case /^NULL$/i.test(word):
+                            null_switch = 'false';
+                            break;
+
+                        case /^\d+$/.test(word):
+                            default_val = word;
+                            break;
+
+                        case /^UNIQUE$/i.test(word):
+                            unique = 'true';
+                            break;
+
+                        default:
+                            name = word;
+                            null_switch = 'true';
+                    }
+            });
+            if (name !== '') res += "'" + name + "' => [\n";
+            if (type !== '') res += "    'type' => '" + type + "',\n";
+            if (constraint !== '') res += "    'constraint' => '" + constraint + "',\n";
+            if (null_switch === 'true') res += "    'null' => TRUE,\n";
+            if (unique !== '') res += "    'unique' => TRUE,\n";
+            if (default_val !== '') res += "    'default' => " + default_val + ",\n";
+            if (name !== '') res += "],\n";
+        });
+
+        $_target.val(res);
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>art_dialog</title>
+    <!--basic-->
+    <script language="JavaScript" src="assets/jquery/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css"/>
+    <!--<script language="JavaScript" src="assets/bootstrap/js/bootstrap.js"></script>-->
+
+    <!--table-->
+    <link rel="stylesheet" type="text/css" href="assets/boot-table/bootstrap-table.css"/>
+    <script language="JavaScript" src="assets/boot-table/bootstrap-table.js"></script>
+
+    <!--artdialog-->
+    <!--<script language="JavaScript" src="dialog.js"></script>-->
+
+    <!--custom-->
+    <link rel="stylesheet" type="text/css" href="css/band_width.css"/>
+</head>
+
+
+<body style="padding: 100px">
+
+<button data-event="test" data-align="top right">open dialog</button>
+<button data-event="test" data-align="top left" style="position:absolute;right:0;top:0;width:100px">open dialog</button>
+<!--<script src="jquery-1.10.2.js"></script>-->
+<script src="assets/jquery/jquery.js"></script>
+<!--<script src="dialog.js"></script>-->
+<script src="assets/dialog.js"></script>
+<script>
+    jQuery('button[data-event=test]').on('click', function() {
+        var d = dialog({
+            id: 'align-test',
+            title: '消息',
+            content: '风吹起的青色衣衫，夕阳里的温暖容颜，你比以前更加美丽，像盛开的花<br>——许巍《难忘的一天》',
+            okValue: '确 定',
+            align: $(this).data('align'),
+            //height: 1024,
+            ok: function() {},
+            cancelValue: '取消',
+            cancel: function() {}
+        });
+
+        d.show(this);
+    });
+</script>
+</body>
+
+<!--custom-->
+<!--<script language="JavaScript" src="js/band_width.js"></script>-->
+
+<script language="JavaScript">
+</script>
+
+</html>

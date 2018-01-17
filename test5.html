@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test5</title>
+    <!--basic-->
+    <script language="JavaScript" src="assets/jquery/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css"/>
+    <script language="JavaScript" src="assets/bootstrap/js/bootstrap.js"></script>
+
+    <!--table-->
+    <link rel="stylesheet" type="text/css" href="assets/boot-table/bootstrap-table.css"/>
+    <script language="JavaScript" src="assets/boot-table/bootstrap-table.js"></script>
+
+    <!--editable-->
+    <!--<link rel="stylesheet" type="text/css" href="boot-table/bootstrap-editable.css"/>-->
+    <!--<script language="JavaScript" src="boot-table/extensions/editable/bootstrap-editable.js"></script>-->
+    <!--<script language="JavaScript" src="boot-table/extensions/editable/bootstrap-table-editable.js"></script>-->
+    <!--<script language="JavaScript" src="js/mindmup-editabletable.js"></script>-->
+
+    <!--timepicker-->
+    <!--<link rel="stylesheet" type="text/css" href="boot-timepicker/css/bootstrap-datetimepicker.min.css"/>-->
+    <!--<link rel="stylesheet" type="text/css" href="boot-timepicker/css/datetimepicker.css"/>-->
+    <!--<script language="JavaScript" src="boot-timepicker/js/bootstrap-datetimepicker.min.js"></script>-->
+    <!--<script language="JavaScript" src="boot-timepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>-->
+
+    <!--artdialog-->
+    <link rel="stylesheet" type="text/css" href="assets/artdialog/ui-dialog.css"/>
+    <script language="JavaScript" src="assets/artdialog/dialog.js"></script>
+
+    <!--select2-->
+    <!--<link rel="stylesheet" type="text/css" href="select2/css/select2.css"/>-->
+    <!--<script language="JavaScript" src="select2/js/select2.js"></script>-->
+
+    <!--checkbox-->
+    <!--<link rel="stylesheet" type="text/css" href="awesome-bootstrap-checkbox/awesome-bootstrap-checkbox.css"/>-->
+    <!--<link rel="stylesheet" type="text/css" href="Font-Awesome/css/font-awesome.css"/>-->
+
+    <!--checkbox2-->
+    <link rel="stylesheet" href="css/test6.css" media="screen" type="text/css"/>
+
+    <!--iCheck-->
+    <link rel="stylesheet" type="text/css" href="assets/icheck-1.x/skins/square/blue.css"/>
+    <script language="JavaScript" src="assets/icheck-1.x/icheck.js"></script>
+
+    <!--custom-->
+    <link rel="stylesheet" type="text/css" href="css/test5.css"/>
+</head>
+
+
+<body style="padding: 100px">
+
+
+<table id="table" data-unique-id="num"></table>
+
+
+<!--<label for="test-input"></label><input type="text" id="test-input" value=""/>-->
+
+
+<div id="dialogBox">
+    <div class="row">
+        <label class="col-sm-1 form-control-static" for="weekOrMonth" style="text-align: right">每</label>
+        <div class="col-sm-11">
+            <select class="col-sm-8 form-control" id="weekOrMonth" onchange="displayPicked(this)">
+                <option value="W">周</option>
+                <option value="D">月</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 thin">
+            <div class="muti-picker" id="table-day-picker"></div>
+        </div>
+        <div class="col-sm-8 thin">
+            <div class="muti-picker" id="table-time-picker"></div>
+        </div>
+    </div>
+</div>
+
+
+<form>
+    <input type="checkbox" id="check1"/>
+    <input type="button" class="btn" onclick="check()" value="Check Checkbox"/>
+    <input type="button" class="btn" onclick="uncheck()" value="Uncheck Checkbox"/>
+
+</form>
+
+<button id="test-btn1" class="btn">test-btn1</button>
+<button id="test-btn2" class="btn">test-btn2</button>
+<button id="test-btn3" class="btn">test-btn3</button>
+<button id="test-btn4" class="btn">test-btn4</button>
+
+<input id="input" class="input-sm" value="aaa || bbb">
+<input type="button" class="btn" onclick="input666(this)" value="Check Checkbox"/>
+
+
+</body>
+
+<!--custom-->
+<script language="JavaScript" src="js/test5.js"></script>
+
+<script language="JavaScript">
+    $('input').iCheck({
+        checkboxClass: 'icheckbox_square-blue',
+        radioClass: 'iradio_square',
+        increaseArea: '20%' // optional
+    });
+</script>
+
+</html>

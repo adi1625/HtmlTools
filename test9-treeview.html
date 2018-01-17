@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test9-treeview</title>
+    <!--basic-->
+    <script language="JavaScript" src="assets/jquery/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css"/>
+    <script language="JavaScript" src="assets/bootstrap/js/bootstrap.js"></script>
+
+    <!--table-->
+    <link rel="stylesheet" type="text/css" href="assets/boot-table/bootstrap-table.css"/>
+    <script language="JavaScript" src="assets/boot-table/bootstrap-table.js"></script>
+
+    <!--artdialog-->
+    <link rel="stylesheet" type="text/css" href="assets/artdialog/ui-dialog.css"/>
+    <script language="JavaScript" src="assets/artdialog/dialog.js"></script>
+
+    <!--checkbox2-->
+    <link rel="stylesheet" href="css/test6.css" media="screen" type="text/css"/>
+
+    <!--zTree-->
+    <link rel="stylesheet" type="text/css" href="assets/zTree/css/metroStyle/metroStyle.css"/>
+    <script language="JavaScript" src="assets/zTree/js/jquery.ztree.all.js"></script>
+
+    <!--custom-->
+    <link rel="stylesheet" type="text/css" href="css/test9-treeview.css"/>
+</head>
+
+
+<body style="padding: 100px">
+
+
+<table id="table" data-unique-id="num"></table>
+
+
+<!--<label for="test-input"></label><input type="text" id="test-input" value=""/>-->
+
+
+<div id="dialogBox2">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="v-margin">
+                <span>待选择：</span>
+            </div>
+            <div class="tree-container include-picked"></div>
+            <div class="v-margin">
+                <input type="button" class="btn" value="Check All">
+                <input type="button" class="btn" value="Uncheck All">
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-2">
+                    <div class="hidden-block"></div>
+                    <div class="hidden-block"></div>
+                    <div class="hidden-block"></div>
+                    <div class="hidden-block"></div>
+                    <div class="hidden-block"></div>
+                    <input type="button" class="add-path-btn btn" value=">>">
+                </div>
+                <div class="col-md-10">
+                    <div class="v-margin">
+                        <span>已选择：</span>
+                        <input name="input-mode" type="radio" onclick="selectOrInput()" id="select-path-mode"
+                               value="select" checked>
+                        <label for="select-path-mode">选择路径</label>
+                        <input name="input-mode" type="radio" onclick="selectOrInput()" id="input-path-mode"
+                               value="textarea">
+                        <label for="input-path-mode">手工输入</label>
+                    </div>
+                    <label for="include-textarea" style="display: none"></label>
+                    <textarea name="" id="include-textarea" class="include-picked" style="display: none"></textarea>
+                    <label for="include-select" style="display: none"></label>
+                    <select name="" id="include-select" class="include-picked" size="12">
+                        <option value="1">1</option>
+                        <option value="1">2</option>
+                        <option value="1">3</option>
+                        <option value="1">4</option>
+                        <option value="1">5</option>
+                        <option value="1">6</option>
+                    </select>
+                    <div class="v-margin">
+                        <input type="button" class="btn del-btn" onclick="deletePicked(this)" value="Delete">
+                        <input type="button" class="btn del-all-btn" onclick="deletePicked(this)" value="Delete All">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<button id="test-btn1" class="btn">test-btn1</button>-->
+<!--<button id="test-btn2" class="btn">test-btn2</button>-->
+<!--<button id="test-btn3" class="btn">test-btn3</button>-->
+<!--<button id="test-btn4" class="btn">test-btn4</button>-->
+
+<!--<input id="input" class="input-sm" value="aaa || bbb">-->
+<!--<input type="button" class="btn" onclick="input666(this)" value="Check Checkbox"/>-->
+
+
+</body>
+
+<!--custom-->
+<script language="JavaScript" src="js/test9-treeview.js"></script>
+
+<script language="JavaScript">
+
+</script>
+
+</html>

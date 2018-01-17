@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap-theme.css"/>
+    <script language="JavaScript" src="assets/jquery/jquery.js"></script>
+    <script language="JavaScript" src="assets/bootstrap/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/boot-table/bootstrap-table.css"/>
+    <script language="JavaScript" src="assets/boot-table/bootstrap-table.js" ></script>
+
+    <link rel="stylesheet" type="text/css" href="assets/boot-timepicker/css/bootstrap-datetimepicker.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/boot-timepicker/css/datetimepicker.css"/>
+    <script language="JavaScript" src="assets/boot-timepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script language="JavaScript" src="assets/boot-timepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+
+    <!--artdialog-->
+    <link rel="stylesheet" type="text/css" href="assets/artdialog/ui-dialog.css"/>
+    <script language="JavaScript" src="assets/artdialog/dialog.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/test.css"/>
+
+</head>
+<body>
+
+<div class="row" style="margin-top: 100px">
+
+    <div class="hosts-body col-md-12">
+        <form action="" class="form-horizontal" id="new_rep_form" method="post" accept-charset="utf-8">
+
+            <div class="tab-content tab-padding10">
+
+                <div class="form-group">
+                    <label for="policyType" class="col-sm-2 control-label">同步策略类型</label>
+                    <div class="col-sm-8 col-md-6">
+                        <select name="policyType" id="policyType" class="form-control" onchange="getPolicyStr(this)">
+                            <option value="0">手动同步</option>
+                            <option value="1" selected>定期同步</option>
+                            <option value="2">间隔同步</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group" id="policyStrGroup" style="display: none">
+                    <label for="policyStr" class="col-sm-2 control-label">同步策略定义</label>
+                    <div class="col-sm-8 col-md-6">
+                        <input type="text" name="policyStr" value="W::3=04:30 || D::5,20=05:00,13:00" id="policyStr"
+                               class="form-control" placeholder=""/>
+                    </div>
+                </div>
+
+                <div class="form-group" id="policyIntervalGroup" style="display: none">
+                    <label class="col-sm-2 control-label">间隔同步策略</label>
+
+                    <div class="col-sm-8 col-md-6">
+                        <label for="gap_start_val" class="col-sm-2 col-md-2 form-control-static"
+                               style="padding-right: 0">开始时间</label>
+                        <div class="col-sm-6 col-md-6" style="padding-left: 0;padding-right: 0">
+                            <div class="input-group date form_datetime" data-date=""
+                                 data-date-format="yyyy-mm-dd hh:ii:ss"
+                                 data-link-field="gap_start">
+                                <input class="form-control" id="gap_start_val" size="16" type="text"
+                                       value="2017-06-15 14:45" readonly>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                            </div>
+                            <input type="hidden" id="gap_start" value=""/>
+                        </div>
+                        <label for="gap_step" class="col-sm-2 col-md-2 form-control-static"
+                               style="padding-right: 0">间隔(分钟)</label>
+                        <div class="col-sm-2 col-md-2" style="padding-left: 0;padding-right: 0">
+                            <input type="text" id="gap_step" class="form-control" value="1"/>
+                        </div>
+                    </div>
+                </div>
+
+                <!--policySchedGroup start-->
+                <div class="form-group" id="policySchedGroup">
+                    <label for="policy_sched_table" class="col-sm-2 control-label">定期同步策略</label>
+                    <div class="table-responsive col-sm-8 col-md-6">
+                        <table class="table table-hover table-bordered" id="policy_sched_table"
+                               data-toolbar="#policy-toolbar"
+                               data-unique-id="sched_item">
+
+                        </table>
+                        <div id="policy-toolbar">
+                            <button type="button" id="appendPolicyTr" class="btn btn-default">add</button>
+                            <button type="button" id="removePolicy" class="btn btn-default">delete</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="col-sm-offset-2 col-sm-8 col-md-6">
+                            <div id="policyMsg" class="alert" role="alert" style="display: none;"><p></p></div>
+                        </div>
+                    </div>
+                    <div id="dialogBox">
+                        <div class="row">
+                            <label class="col-sm-1 form-control-static" for="weekOrMonth" style="text-align: right">每</label>
+                            <div class="col-sm-11">
+                                <select class="col-sm-8 form-control" id="weekOrMonth" onchange="displayPicked(this)">
+                                    <option value="W">周</option>
+                                    <option value="D">月</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4 thin">
+                                <div class="muti-picker" id="table-day-picker"></div>
+                            </div>
+                            <div class="col-sm-8 thin">
+                                <div class="muti-picker" id="table-time-picker"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--policySchedGroup end-->
+
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+<!--test-->
+<input type="button" onclick="test()">
+<!--test end-->
+
+<script language="JavaScript" src="js/test.js"></script>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

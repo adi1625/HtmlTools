@@ -1,0 +1,60 @@
+
+body {
+    font-size: 14px;
+}
+
+div {
+    box-shadow: 1px 2px 10px #d9d9d9;
+}
+
+#dialogBox2 {
+    max-width: 700px;
+    padding: 20px;
+}
+
+.add-path-btn {
+    margin: 5px -7px;
+}
+
+.v-margin {
+    min-height: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.hidden-block {
+    display: inline-block;
+    height: 2em;
+    width: 3em;
+    visibility: hidden;
+}
+
+#include-textarea {
+    margin-bottom: -3px;
+}
+
+.include-picked option {
+    font-weight: normal;
+    display: block;
+    white-space: pre;
+    min-height: 1.2em;
+    padding: 3px 10px;
+}
+
+.include-picked, #include-select {
+    width: 100%;
+    height: 19.5em;
+    box-shadow: 1px 2px 10px #d9d9d9;
+}
+.tree-container {
+    overflow-y: scroll;
+    border: 1px solid #d9d9d9;
+    box-sizing: content-box;
+}
+
+input[type = "radio"] {
+    margin-left: .5em;
+    vertical-align: text-bottom;
+    margin-bottom: 1px;
+    margin-bottom: -2px \9;
+}
