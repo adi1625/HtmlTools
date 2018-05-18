@@ -306,8 +306,8 @@
             if (name !== '') res += "'" + name + "' => [\n";
             if (type !== '') res += "    'type' => '" + type + "',\n";
             if (constraint !== '') res += "    'constraint' => '" + constraint + "',\n";
-            if (null_switch === 'true') res += "    'null' => TRUE,\n";
-            if (unique !== '') res += "    'unique' => TRUE,\n";
+            if (null_switch === 'true') res += "    'null' => true,\n";
+            if (unique !== '') res += "    'unique' => true,\n";
             if (default_val !== '') res += "    'default' => " + default_val + ",\n";
             if (name !== '') res += "],\n";
         });
