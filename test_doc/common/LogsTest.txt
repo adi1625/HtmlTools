@@ -1,0 +1,71 @@
+URL: [GET] https://rap2api.info2soft.com/app/mock/data/464?scope=request
+RS: {
+  "page": 1,
+  "end_time": 1,
+  "limit": 10,
+  "start_time": 1
+}
+
+URL: [GET] http://192.168.72.70:58080/api/op_log
+ARGS: {"start_time":1,"end_time":1,"limit":10,"page":1}
+RS: {"code":0,"message":"[0] success","logs":[{"id":"1","user_uuid":"1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC","user_name":"admin","op_time":"1546416705","start_time":"1546416702","end_time":"1546416705","address":"192.168.71.212","description":"创建节点 [ 名称 : \"N3_72.75\" ]","result":"0","failure_reason":"[0] 操作成功。","type":"0"},{"id":"2","user_uuid":"1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC","user_name":"admin","op_time":"1546416796","start_time":"1546416796","end_time":"1546416796","address":"192.168.71.212","description":"添加许可","result":"0","failure_reason":"[0] 操作成功。","type":"0"},{"id":"3","user_uuid":"1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC","user_name":"admin","op_time":"1546416801","start_time":"1546416801","end_time":"1546416801","address":"192.168.71.212","description":"更新许可绑定 [ 数量 : \"1\" ]","result":"0","failure_reason":"[0] 操作成功。","type":"0"},{"id":"4","user_uuid":"1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC","user_name":"admin","op_time":"1546416806","start_time":"1546416806","end_time":"1546416806","address":"192.168.71.212","description":"更新许可绑定 [ 数量 : \"1\" ]","result":"0","failure_reason":"[0] 操作成功。","type":"0"},{"id":"5","user_uuid":"1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC","user_name":"admin","op_time":"1546416986","start_time":"1546416984","end_time":"1546416986","address":"192.168.71.212","description":"创建复制规则 [ 名称 : \"testNormal\" ]","result":"0","failure_reason":"[0] 操作成功。","type":"0"},{"id":"6","user_uuid":"1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC","user_name":"admin","op_time":"1546417035","start_time":"1546417034","end_time":"1546417035","address":"192.168.71.212","description":"创建还原任务 [ 名称 : \"\" ]","result":"0","failure_reason":"[0] 操作成功。","type":"0"},{"id":"7","user_uuid":"1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC","user_name":"admin","op_time":"1546417165","start_time":"1546417164","end_time":"1546417165","address":"192.168.71.212","description":"update_rep_recovery [ 名称 : \"\" ]","result":"0","failure_reason":"[0] 操作成功。","type":"0"},{"id":"8","user_uuid":"1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC","user_name":"admin","op_time":"1546417196","start_time":"1546417196","end_time":"1546417196","address":"192.168.71.212","description":"update_rep_recovery [ 名称 : \"\" ]","result":"0","failure_reason":"[0] 操作成功。","type":"0"},{"id":"9","user_uuid":"1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC","user_name":"admin","op_time":"1546417337","start_time":"1546417337","end_time":"1546417337","address":"192.168.71.212","description":"update_rep_recovery [ 名称 : \"\" ]","result":"10001009","failure_reason":"[10001009] 名称重复","type":"0"},{"id":"10","user_uuid":"1BCFCAA3-E3C8-3E28-BDC5-BE36FDC2B5DC","user_name":"admin","op_time":"1546417343","start_time":"1546417342","end_time":"1546417343","address":"192.168.71.212","description":"update_rep_recovery [ 名称 : \"\" ]","result":"0","failure_reason":"[0] 操作成功。","type":"0"}],"total":176}
+
+URL: [GET] https://rap2api.info2soft.com/app/mock/data/202?scope=request
+RS: {
+  "uuid": "F97B3FD5-4D5D-41EE-22A9-740A74E1E13C",
+  "level": 1,
+  "start": 1,
+  "page": 1,
+  "end": 1,
+  "limit": 10
+}
+
+URL: [GET] http://192.168.72.70:58080/api/logs
+ARGS: {"level":1,"start":1,"limit":10,"end":1,"page":1,"uuid":"F97B3FD5-4D5D-41EE-22A9-740A74E1E13C"}
+RS: {"code":0,"message":"","logs":[],"total":0}
+
+URL: [GET] https://rap2api.info2soft.com/app/mock/data/203?scope=request
+RS: {
+  "uuid": "",
+  "end": 1,
+  "level": 1,
+  "start": 1,
+  "node_uuid": "",
+  "page": 1,
+  "limit": 1
+}
+
+URL: [GET] http://192.168.72.70:58080/api/logs/ha
+ARGS: {"level":1,"start":1,"limit":1,"end":1,"page":1,"node_uuid":"","uuid":""}
+RS: {"code":0,"message":"","logs":[],"total":0}
+
+URL: [GET] https://rap2api.info2soft.com/app/mock/data/204?scope=request
+RS: {
+  "level": 1,
+  "page": 1,
+  "limit": 10,
+  "start": 1,
+  "uuid": "67E33CDB-D75B-15B3-367D-50C764F5A26F",
+  "end": 1
+}
+
+URL: [GET] http://192.168.72.70:58080/api/logs/node
+ARGS: {"level":1,"limit":10,"start":1,"end":1,"page":1,"uuid":"67E33CDB-D75B-15B3-367D-50C764F5A26F"}
+RS: {"code":0,"message":"","logs":[],"total":0}
+
+URL: [GET] http://192.168.72.70:58080/api/logs/npsvr
+ARGS: {}
+RS: {"code":0,"message":"","logs":[],"total":0}
+
+URL: [GET] https://rap2api.info2soft.com/app/mock/data/206?scope=request
+RS: {
+  "start_stamp": 1545637314,
+  "type": "month",
+  "uuid": "F97B3FD5-4D5D-41EE-22A9-740A74E1E13C"
+}
+
+URL: [GET] http://192.168.72.70:58080/api/logs/traffic
+ARGS: {"start_stamp":1545637314,"type":"month","uuid":"F97B3FD5-4D5D-41EE-22A9-740A74E1E13C"}
+RS: {"code":0,"message":"","traffics":[{"start_time":1544255074,"traffic":0,"speed":0},{"start_time":1544341474,"traffic":0,"speed":0},{"start_time":1544427874,"traffic":0,"speed":0},{"start_time":1544514274,"traffic":0,"speed":0},{"start_time":1544600674,"traffic":0,"speed":0},{"start_time":1544687074,"traffic":0,"speed":0},{"start_time":1544773474,"traffic":0,"speed":0},{"start_time":1544859874,"traffic":0,"speed":0},{"start_time":1544946274,"traffic":0,"speed":0},{"start_time":1545032674,"traffic":0,"speed":0},{"start_time":1545119074,"traffic":0,"speed":0},{"start_time":1545205474,"traffic":0,"speed":0},{"start_time":1545291874,"traffic":0,"speed":0},{"start_time":1545378274,"traffic":0,"speed":0},{"start_time":1545464674,"traffic":0,"speed":0},{"start_time":1545551074,"traffic":0,"speed":0},{"start_time":1545637474,"traffic":0,"speed":0},{"start_time":1545723874,"traffic":0,"speed":0},{"start_time":1545810274,"traffic":0,"speed":0},{"start_time":1545896674,"traffic":0,"speed":0},{"start_time":1545983074,"traffic":0,"speed":0},{"start_time":1546069474,"traffic":0,"speed":0},{"start_time":1546155874,"traffic":0,"speed":0},{"start_time":1546242274,"traffic":0,"speed":0},{"start_time":1546328674,"traffic":0,"speed":0},{"start_time":1546415074,"traffic":0,"speed":0},{"start_time":1546501474,"traffic":0,"speed":0},{"start_time":1546587874,"traffic":0,"speed":0},{"start_time":1546674274,"traffic":0,"speed":0},{"start_time":1546760674,"traffic":0,"speed":0},{"start_time":1546847074,"traffic":0,"speed":0}]}
+
+Process finished with exit code 0
