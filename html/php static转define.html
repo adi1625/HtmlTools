@@ -53,6 +53,7 @@
         <button type="button" class="btn btn-default" onclick="camel2UnderLine()">camel2UnderLine()</button>
         <button type="button" class="btn btn-default" onclick="migration()">migration()</button>
         <button type="button" class="btn btn-default" onclick="sortByAlpha()">sortByAlpha()</button>
+        <button type="button" class="btn btn-default" onclick="sortByAlphaDesc()">sortByAlphaDesc()</button>
         <button type="button" class="btn btn-default" onclick="englishConvert('dx')">UpperCase</button>
         <button type="button" class="btn btn-default" onclick="englishConvert('xx')">LowerCase</button>
         <button type="button" class="btn btn-default" onclick="errCodeConvert()">errCodeConvert()</button>
@@ -98,6 +99,15 @@
         var rows = srcStr.split('\n');
 
         rows = rows.sort();
+
+        $_target.val(rows.join('\n'));
+    }
+
+    function sortByAlphaDesc() {
+        var srcStr = $_src.val();
+        var rows = srcStr.split('\n');
+
+        rows = rows.sort().reverse();
 
         $_target.val(rows.join('\n'));
     }
