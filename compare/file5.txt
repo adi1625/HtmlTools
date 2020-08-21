@@ -1,0 +1,132 @@
+
+
+
+$lang['ONLINE'] = 'ONLINE';
+$lang['OFFLINE'] = 'OFFLINE';
+$lang['UNKNOWN'] = 'UNKNOWN';
+$lang['FINISH'] = 'FINISH';
+$lang['CHECKING'] = 'CHECKING';
+$lang['STOP'] = 'STOP';
+$lang['REPLICATION'] = 'REPLICATION';
+$lang['MIRROR'] = 'MIRROR';
+$lang['EXCPT'] = 'abnormal';
+$lang['STALE'] = 'STALE';
+$lang['SWITCH'] = 'SWITCH';
+$lang['WAIT'] = 'WAIT';
+$lang['EXECUTING'] = 'EXECUTING';
+$lang['IDLE'] = 'IDLE';
+$lang['DEAD'] = 'DEAD';
+$lang['CDP_MERGE'] = 'CDP_MERGE';
+$lang['CALC'] = 'CALC';
+$lang['GENERATING'] = 'GENERATING';
+$lang['NEGO'] = 'NEGO';
+$lang['BLK_SAVE'] = 'BLK_SAVE';
+$lang['FFO_IDLE'] = 'FFO_IDLE';
+$lang['FSP_IDLE'] = 'FFO_IDLE';
+$lang['FFO_MIRROR'] = 'FFO_MIRROR';
+$lang['FSP_RC_IDLE'] = 'FSP_RC_IDLE';
+$lang['FSP_WAIT'] = 'FSP_WAIT';
+$lang['FFO_MOVING'] = 'FFO_MOVING';
+$lang['FFO_DONE'] = 'FFO_DONE';
+$lang['FFO_REBOOTED'] = 'FFO_REBOOTED';
+$lang['FFO_PREPARE'] = 'FFO_PREPARE';
+$lang['FFO_ODD'] = 'FFO_ODD';
+$lang['FFO_UNKNOWN'] = 'FFO_UNKNOWN';
+$lang['FFO_BOOTING'] = 'FFO_BOOTING';
+$lang['FFO_BOOTFAIL'] = 'FFO_BOOTFAIL';
+$lang['PENDING'] = 'PENDING';
+$lang['SCHEDULED'] = 'SCHEDULED';
+$lang['COMPARING'] = 'COMPARING';
+$lang['FSP_COMPLETED'] = 'Backup completion';
+$lang['DIAGNOSE'] = 'DIAGNOSE';
+$lang['RUN'] = 'RUN';
+$lang['INSTALLING'] = 'INSTALLING';
+$lang['REGISTERING'] = 'REGISTERING';
+
+   
+$lang['ERR_TKN'] = 'ERR_TKN';
+$lang['VP_START'] = 'VP_START';
+$lang['VP_CHECK'] = 'VP_CHECK';
+$lang['VP_PREPARE'] = 'VP_PREPARE';
+$lang['VP_CFG'] = 'VP_CFG';
+$lang['VP_CBT'] = 'VP_CBT';
+$lang['VP_CRVM'] = 'VP_CRVM';
+$lang['VP_MOVE'] = 'VP_MOVE';
+$lang['VP_RVT'] = 'VP_RVT';
+$lang['VP_QSTK'] = 'VP_QSTK';
+$lang['VP_TRNS'] = 'VP_TRNS';
+$lang['VP_MGLC'] = 'VP_MGLC';
+$lang['VP_SAVE_DATA'] = 'VP_SAVE_DATA';
+$lang['VP_PEND'] = 'VP_PEND';
+$lang['TMP_FAILOVER'] = 'TMP_FAILOVER';
+$lang['PMT_FAILOVER'] = 'PMT_FAILOVER';
+$lang['CANCELED'] = 'CANCELED';
+
+   
+$lang['NAS_NEGO'] = 'NAS_NEGO';
+$lang['NAS_RUN'] = 'NAS_RUN';
+$lang['SYNC'] = 'SYNC';
+$lang['TRANS'] = 'TRANS';
+$lang['NAS_NETBREAK'] = 'NAS_NETBREAK';
+
+   
+$lang['HA_UNJOIN'] = 'HA_UNJOIN';
+$lang['HA_MASTER'] = 'HA_MASTER_NODE';
+$lang['HA_PREOVER'] = 'HA_SWITCH';
+$lang['HA_POSTOVER'] = 'HA_SWITCH';
+$lang['HA_SLAVE'] = 'HA_SLAVE_NODE';
+$lang['HA_PREBACK'] = 'HA_SWITCH';
+$lang['HA_POSTBACK'] = 'HA_SWITCH';
+$lang['HA_UNKNOWN'] = 'HA_UNKNOWN';
+   
+$lang['HA_RUN'] = 'HA_RUN';
+$lang['HA_MIRR'] = 'HA_MIRROR';
+$lang['HA_MIRROR'] = 'HA_MIRROR';
+$lang['HA_READY'] = 'HA_READY';
+$lang['HA_WARN'] = 'HA_WARN';
+$lang['HA_FAIL'] = 'HA_FAIL';
+$lang['HA_START'] = 'HA_START';
+$lang['HA_STOP'] = 'HA_STOP';
+$lang['UNJOIN'] = 'Free';
+$lang['JOIN'] = 'Effective';
+$lang['ELECT'] = 'Election';
+$lang['EXPIRE'] = 'Expire';
+
+   
+$lang['NODE_NET_EXCEPTION'] = 'NODE_NET_EXCEPTION';
+$lang['EXCEPTION'] = 'EXCEPTION';
+$lang['START'] = 'START';
+   
+$lang['TRACK_JOB_NONE'] = 'TRACK_JOB_NONE';
+$lang['TRACK_JOB_INIT'] = 'TRACK_JOB_INIT';
+$lang['TRACK_JOB_STARTING'] = 'TRACK_JOB_STARTING';
+$lang['TRACK_JOB_RUN'] = 'TRACK_JOB_RUN';
+$lang['TRACK_JOB_SUSPENDING'] = 'TRACK_JOB_SUSPENDING';
+$lang['TRACK_JOB_SUSPENDED'] = 'TRACK_JOB_SUSPENDED';
+$lang['TRACK_JOB_STOPPING'] = 'TRACK_JOB_STOPPING';
+$lang['TRACK_JOB_STOPPED'] = 'TRACK_JOB_STOPPED';
+$lang['TRACK_JOB_FINISH'] = 'TRACK_JOB_FINISH';
+   
+$lang['TRACK_NONE_JOB'] = 'IDLE';
+$lang['TRACK_SYNC_JOB'] = 'TRACK_SYNC_JOB';
+$lang['TRACK_SCAN_JOB'] = 'TRACK_SCAN_JOB';
+   
+$lang['ERROR'] = 'ERROR';
+$lang['SHUTOFF'] = 'SHUTOFF';
+$lang['BUILD'] = 'BUILD';
+$lang['BUILDING'] = 'BUILDING';
+$lang['ACTIVE'] = 'ACTIVE';
+$lang['CREATING'] = 'CREATING';
+$lang['AVAILABLE'] = 'AVAILABLE';
+$lang['IN-USE'] = 'IN-USE';
+$lang['ATTACHING'] = 'ATTACHING';
+$lang['DETACHING'] = 'DETACHING';
+$lang['RESTORING-BACKUP'] = 'RESTORING-BACKUP';
+$lang['BACKING-UP'] = 'BACKING-UP';
+$lang['ERROR_RESTORING'] = 'ERROR_RESTORING';
+$lang['UPLOADING'] = 'UPLOADING';
+$lang['DOWNLOADING'] = 'DOWNLOADING';
+$lang['DELETING'] = 'DELETING';
+$lang['ERROR_DELETING'] = 'ERROR_DELETING'
+
+

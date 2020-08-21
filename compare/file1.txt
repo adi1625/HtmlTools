@@ -1,45 +1,61 @@
 {
-  "allowStartVir": "0",
-  "backup_size": "6245376",
-  "backup_time": "2018-03-20_09-43-18",
-  "bk_uuid": "C02B76DB-EBE8-E029-B645-072B2E1A7460",
-  "core_per_sock": "1",
-  "dc": "ha-datacenter",
-  "disk_count": "1",
-  "disk_list_json": [
-    {
-      "disk_name": "chenky_vp_test.vmdk"
-    }
-  ],
-  "ds": "datastore107（1）",
-  "enable_create": "0",
-  "groupRecove": "0",
-  "host_ip": "192.168.88.107",
-  "hostname": "dev-esxi.6.6.6",
-  "lanfree": "23",
-  "mac": "3,00:50:56:96:73:51,5,4000,100,7,1",
-  "memMB": "3972",
-  "mode": " ",
-  "new_dc": "ha-datacenter",
-  "new_dcmor": "ha-datacenter",
-  "new_disk_all": "",
-  "new_ds": "datastore107（1）",
-  "new_dspath": "/",
-  "new_hostname": "dev-esxi.6.6.6",
-  "new_vmname": "chenky_vp_test",
-  "new_vp_uuid": "C2B5C9DF-6FD5-4B64-AD25-6209C22B5C8F",
-  "num_cpu": "2",
-  "rc_name": "111",
-  "rc_path": "H:\\vp_bk\\chenky_vp_test_192.168.88.107\\",
-  "recovery_type": "",
-  "regroupname": "",
-  "rep_uuid": "",
-  "vdisk_lst": "[datastore107（1）] chenky_vp_test/chenky_vp_test.vmdk",
-  "versig": "B46E16A2-3F25-47B9-8126-730BC6F67BD0",
-  "vm_name_list": "",
-  "vmcfg": "",
-  "vmname": "chenky_vp_test",
-  "vmoref": "119",
-  "vp_type": "HostAgent",
-  "vp_uuid": "C2B5C9DF-6FD5-4B64-AD25-6209C22B5C8F"
+    "code": 0,
+    "message": "ok",
+    "records": [
+        {
+            "id": 681,
+            "id_card": "120101198402070518",
+            "name": "赵玉良",
+            "nickname": "红运",
+            "phone_number": "18622925880",
+            "status": "enable",
+            "create": "2019-06-11 21:37:32",
+            "update": "2020-07-06 12:50:55",
+            "avatar": "/img/pa/681.png"
+        },
+        {
+            "id": 1217,
+            "id_card": "120223198201235375",
+            "name": "尹凤华",
+            "nickname": "老兵",
+            "phone_number": "15102262652",
+            "status": "enable",
+            "create": "2020-05-26 16:02:27",
+            "update": "2020-07-06 12:50:55",
+            "avatar": "/img/pa/1217.png"
+        },
+        {
+            "id": 1407,
+            "id_card": "120224198611042825",
+            "name": "吴凡",
+            "nickname": "轩轩轩",
+            "phone_number": "13820691738",
+            "status": "enable",
+            "create": "2020-05-30 06:09:46",
+            "update": "2020-05-30 16:08:20",
+            "avatar": "/img/pa/1407.png"
+        },
+        {
+            "id": 58,
+            "id_card": "230119198903162217",
+            "name": "姜保磊",
+            "nickname": "磊哥",
+            "phone_number": "13820691738",
+            "status": "enable",
+            "create": "2019-04-09 11:51:31",
+            "update": "2020-07-06 12:50:55",
+            "avatar": "/img/pa/58.png"
+        },
+        {
+            "id": 1218,
+            "id_card": "120103196710280019",
+            "name": "许是凡",
+            "nickname": "蝉鸣",
+            "phone_number": "13803019199",
+            "status": "enable",
+            "create": "2020-05-26 16:02:27",
+            "update": "2020-07-06 12:50:55",
+            "avatar": "/img/pa/1218.png"
+        }
+    ]
 }

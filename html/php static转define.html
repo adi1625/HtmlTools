@@ -51,6 +51,7 @@
         <button type="button" class="btn btn-default" onclick="alert('By Kyran ~')">=== About ===</button>
         <button type="button" class="btn btn-default" onclick="static2Define()">static2Define()</button>
         <button type="button" class="btn btn-default" onclick="camel2UnderLine()">camel2UnderLine()</button>
+        <button type="button" class="btn btn-default" onclick="underLine2Camel()">underLine2Camel()</button>
         <button type="button" class="btn btn-default" onclick="migration()">migration()</button>
         <button type="button" class="btn btn-default" onclick="sortByAlpha()">sortByAlpha()</button>
         <button type="button" class="btn btn-default" onclick="sortByAlphaDesc()">sortByAlphaDesc()</button>
@@ -79,26 +80,35 @@
 
     function static2Define() {
         var srcStr = $_src.val();
-        srcStr = srcStr.replace(/public static \$/g, "define('");
-        srcStr = srcStr.replace(/ = /g, "', ");
-        srcStr = srcStr.replace(/;/g, ");");
-        $_target.val(srcStr);
+        srcStr = srcStr.replace(/public static \$/g, 'define(\'')
+        srcStr = srcStr.replace(/ = /g, '\', ')
+        srcStr = srcStr.replace(/;/g, ');')
+        $_target.val(srcStr)
     }
 
-    function camel2UnderLine() {
-        var srcStr = $_src.val();
+    function camel2UnderLine () {
+        var srcStr = $_src.val()
         srcStr = srcStr.replace(/[0-9a-z][A-Z][a-z]/g, function (word) {
-            return word.substring(0, 1) + "_" + word.substring(1, 2).toLowerCase() + word.substring(2, 3);
-        });
+            return word.substring(0, 1) + '_' + word.substring(1, 2).toLowerCase() + word.substring(2, 3)
+        })
 
-        $_target.val(srcStr);
+        $_target.val(srcStr)
     }
 
-    function sortByAlpha() {
-        var srcStr = $_src.val();
-        var rows = srcStr.split('\n');
+    function underLine2Camel () {
+        var srcStr = $_src.val()
+        srcStr = srcStr.replace(/_[a-z]/g, function (word) {
+            return word.substring(1, 2).toUpperCase()
+        })
 
-        rows = rows.sort();
+        $_target.val(srcStr)
+    }
+
+    function sortByAlpha () {
+        var srcStr = $_src.val()
+        var rows = srcStr.split('\n')
+
+        rows = rows.sort()
 
         $_target.val(rows.join('\n'));
     }

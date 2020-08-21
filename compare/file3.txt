@@ -1,0 +1,146 @@
+r   反向，
+b   base64解
+be  b64编码
+a   字符拼接转数组
+
+相同字段（用arg_convert过滤）
+
+    'bk_uuid',
+    'compress',
+    'del_policy',
+    'file_check_dir',
+    'snap_type',
+    'wk_uuid',
+    'task_uuid',
+    'task_type',
+    'user_uuid',
+
+改名字段（把左边的加在上面过滤，再改名）
+
+    'autostart' => 'auto_start',
+    'bkup_mode' => 'blk_direct_copy',
+    'encrypt' => 'encrypt_switch',
+    'target_path_policy' => 'bk_path_policy',
+    'file_check_open' => 'file_check_switch',
+    'fullcopy' => 'full_copy',
+    'blk_size' => 'mirr_blk_size',
+    'open_type' => 'mirr_open_type',
+    'syncattr' => 'mirr_sync_attr',
+    'sync_flag' => 'mirr_sync_flag',
+    'blk_recovery_style' => 'rc_style',
+    'dst_type' => 'bk_data_type',
+    'src_type' => 'wk_data_type',
+
+内容转换（把左边的加在上面过滤、改名，再转换内容）
+
+01 revert
+
+base64 array
+
+    'target_path' => 'bk_path',
+    'excludes' => 'excl_path',
+    'includes' => 'wk_path',
+
+base64 rename
+
+    'rawfile' => 'rc_point_in_time',
+    'bak_dir' => 'rc_data_path',
+
+base64
+
+    'task_name',
+    'secret_key',
+
+复杂转换
+
+O: create_time  create_time     日期转换
+N: random_str 赋值
+
+'one_time' => 'bkup_one_time',  日期转换
+'BACKUP_TYPE_ALL' => 'backup_type', 策略转换
+
+policy_uuid  bkup_schedule  策略转换 同 fsp
+
+'policy_type' => 'bkup_policy',  策略转换
+bkup_window  策略转换
+
+'data_save_limit' => 'bkup_schedule' limit,  策略转换
+
+O: is_template = task_type:10
+
+========================================
+
+mssql_settings
+
+    bk
+
+    'data_source',
+    'db_name',
+
+    rc
+
+    'lgc_name',
+    'lgc_num',
+    'lgc_path',
+    'new_db_name',
+    'src_db_name',
+
+    bk
+
+    'mssql_check_out' => 'check_out',
+    'mssql_instance_name' => 'instance_name',
+    'mssql_verify_mode' => 'win_verify',
+    'mssql_user_name' => 'user_id',
+    'mssql_password' => 'pass_word',
+    'mssql_conn_timeout' => 'time_out',
+    'db_size' => 'dbsize',
+
+    rc
+
+    'lnnum' => 'ln_num',
+    'tabinfo' => 'tab_info',
+    'tabnum' => 'tab_num',
+
+oracle_rman_settings
+
+    'rman_num_streams_df',
+    'rman_filespertset_df',
+    'rman_num_streams_arch',
+    'rman_include_arch_flag',
+    'rman_del_arch',
+    'rman_set_limit_arch_flag',
+    'rman_filespertset_arch',
+    'rman_cold_bkup',
+    'rman_maxsetsize_arch',
+    'rman_skip_offline',
+    'rman_skip_readonly',
+    'rman_maxsetsize_df',
+
+oracle_settings bk
+
+    'ora_content_type',
+    'ora_use_script',
+    'ora_script_path',
+    'ora_sid_name',
+    'ora_home_path',
+    'ora_passwd',
+    'ora_port',
+
+oracle_settings rc
+
+    'ora_do_recovery',
+    'ora_do_restore',
+    'ora_rc_point_date',
+    'ora_rc_point_log_seq',
+    'ora_rc_point_scn',
+    'ora_rc_point_thread',
+    'ora_rc_point_type',
+    'ora_rc_type',
+    'ora_rst_limit_date',
+    'ora_rst_limit_log_seq',
+    'ora_rst_limit_scn',
+    'ora_rst_limit_thread',
+    'ora_rst_limit_type',
+    'ora_rst_type',
+
+    'ora_rst_limit_seq' => 'ora_rst_limit_log_seq',

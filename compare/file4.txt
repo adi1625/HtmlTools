@@ -1,0 +1,129 @@
+
+$lang['ONLINE'] = '在线';
+$lang['OFFLINE'] = '离线';
+$lang['UNKNOWN'] = '未知';
+$lang['FINISH'] = '完成';
+$lang['CHECKING'] = '检查';
+$lang['STOP'] = '停止';
+$lang['REPLICATION'] = '复制';
+$lang['MIRROR'] = '镜像';
+$lang['EXCPT'] = '异常';
+$lang['STALE'] = '失效';
+$lang['SWITCH'] = '切换';
+$lang['WAIT'] = '等待';
+$lang['EXECUTING'] = '执行中';
+$lang['IDLE'] = '空闲';
+$lang['DEAD'] = '异常';
+$lang['CDP_MERGE'] = 'CDP合并';
+$lang['CALC'] = '计算中';
+$lang['GENERATING'] = '生成中';
+$lang['NEGO'] = '协商';
+$lang['BLK_SAVE'] = '数据保存中';
+$lang['FFO_IDLE'] = '就绪';
+$lang['FSP_IDLE'] = '备份就绪';
+$lang['FFO_MIRROR'] = '镜像';
+$lang['FSP_RC_IDLE'] = '还原就绪';
+$lang['FSP_WAIT'] = '还原中';
+$lang['FFO_MOVING'] = '迁移中...';
+$lang['FFO_DONE'] = '重启就绪';
+$lang['FFO_REBOOTED'] = '迁移完成';
+$lang['FFO_PREPARE'] = '准备';
+$lang['FFO_ODD'] = '异常';
+$lang['FFO_UNKNOWN'] = '未知';
+$lang['FFO_BOOTING'] = '正在重启...';
+$lang['FFO_BOOTFAIL'] = '备机重启失败';
+$lang['PENDING'] = '等待';
+$lang['SCHEDULED'] = '计划';
+$lang['COMPARING'] = '比较';
+$lang['FSP_COMPLETED'] = '备份完成';
+$lang['DIAGNOSE'] = '诊断中';
+$lang['RUN'] = '运行';
+$lang['INSTALLING'] = '安装中';
+$lang['REGISTERING'] = '注册中';
+
+   
+$lang['ERR_TKN'] = '密码错误';
+$lang['VP_START'] = '启动';
+$lang['VP_CHECK'] = '检查数据';
+$lang['VP_PREPARE'] = '备份准备';
+$lang['VP_CFG'] = '获取虚机配置';
+$lang['VP_CBT'] = '查询变化数据';
+$lang['VP_CRVM'] = '创建新虚机';
+$lang['VP_MOVE'] = '迁移就绪';
+$lang['VP_RVT'] = '恢复快照';
+$lang['VP_QSTK'] = '排队中';
+$lang['VP_TRNS'] = '传输中';
+$lang['VP_MGLC'] = '快照清理';
+$lang['VP_SAVE_DATA'] = '保存数据中';
+$lang['VP_PEND'] = '虚机挂起';
+$lang['TMP_FAILOVER'] = '临时切换';
+$lang['PMT_FAILOVER'] = '永久切换';
+$lang['CANCELED'] = '已取消';
+
+   
+$lang['NAS_NEGO'] = '协商';
+$lang['NAS_RUN'] = '运行';
+$lang['SYNC'] = '同步';
+$lang['TRANS'] = '转换';
+$lang['NAS_NETBREAK'] = '网络中断';
+
+   
+$lang['HA_UNJOIN'] = '未加入';
+$lang['HA_MASTER'] = '主节点';
+$lang['HA_PREOVER'] = '切换中';
+$lang['HA_POSTOVER'] = '切换中';
+$lang['HA_SLAVE'] = '从节点';
+$lang['HA_PREBACK'] = '切换中';
+$lang['HA_POSTBACK'] = '切换中';
+$lang['HA_UNKNOWN'] = '未知';
+   
+$lang['HA_RUN'] = '数据未同步';
+$lang['HA_MIRR'] = '镜像';
+$lang['HA_MIRROR'] = '镜像';
+$lang['HA_READY'] = '就绪';
+$lang['HA_WARN'] = '警告';
+$lang['HA_FAIL'] = '失败';
+$lang['HA_START'] = '开始';
+$lang['HA_STOP'] = '停止';
+$lang['UNJOIN'] = '游离';
+$lang['JOIN'] = '有效';
+$lang['ELECT'] = '选举';
+$lang['EXPIRE'] = '失效';
+
+   
+$lang['NODE_NET_EXCEPTION'] = '节点离线';
+$lang['EXCEPTION'] = '异常';
+$lang['START'] = '开始';
+   
+$lang['TRACK_JOB_NONE'] = '空闲';
+$lang['TRACK_JOB_INIT'] = '初始化';
+$lang['TRACK_JOB_STARTING'] = '开始';
+$lang['TRACK_JOB_RUN'] = '运行';
+$lang['TRACK_JOB_SUSPENDING'] = '等待';
+$lang['TRACK_JOB_SUSPENDED'] = '等待完成';
+$lang['TRACK_JOB_STOPPING'] = '正在停止';
+$lang['TRACK_JOB_STOPPED'] = '停止';
+$lang['TRACK_JOB_FINISH'] = '完成';
+   
+$lang['TRACK_NONE_JOB'] = '空闲';
+$lang['TRACK_SYNC_JOB'] = '同步';
+$lang['TRACK_SCAN_JOB'] = '分析';
+   
+$lang['ERROR'] = '故障';
+$lang['SHUTOFF'] = '关机';
+$lang['BUILD'] = '创建中';
+$lang['BUILDING'] = '创建中';
+$lang['ACTIVE'] = '运行中';
+$lang['CREATING'] = '创建中';
+$lang['AVAILABLE'] = '可使用';
+$lang['IN-USE'] = '使用中';
+$lang['ATTACHING'] = '挂载中';
+$lang['DETACHING'] = '卸载中';
+$lang['RESTORING-BACKUP'] = '恢复中';
+$lang['BACKING-UP'] = '备份中';
+$lang['ERROR_RESTORING'] = '恢复出错';
+$lang['UPLOADING'] = '上传中';
+$lang['DOWNLOADING'] = '正在下载';
+$lang['DELETING'] = '正在删除';
+$lang['ERROR_DELETING'] = '删除出错'
+
